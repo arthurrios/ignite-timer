@@ -45,6 +45,8 @@ export function CyclesContextProvider({
   }
 
   function markCurrentCycleAsFinished() {
+    setActiveCycleId(null)
+
     setCycles((prevState) =>
       prevState.map((cycle) => {
         if (cycle.id === activeCycleId) {
